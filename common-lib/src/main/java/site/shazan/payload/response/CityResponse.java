@@ -14,7 +14,7 @@ public class CityResponse {
     private String name;
     private String cityCode;
     private String countryCode;
-    private String CountryName;
+    private String countryName;
     private String regionCode;
     private String timeZoneId;
 }
