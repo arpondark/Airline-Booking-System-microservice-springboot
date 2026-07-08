@@ -45,7 +45,7 @@
     -->
     <properties>
         <!-- Java version for compilation -->
-        <java.version>17</java.version>
+        <java.version>25</java.version>
 
         <!--
             Source encoding: prevents "platform default encoding" warnings.
@@ -97,6 +97,18 @@
                 <version>${spring.cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!--
+                Internal sibling modules — BOMs only manage third-party libraries,
+                so we must pin the versions of our own reactor modules here.
+                Children declare common-lib WITHOUT a <version> tag and Maven
+                resolves it from this entry.
+            -->
+            <dependency>
+                <groupId>site.shazan</groupId>
+                <artifactId>common-lib</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
