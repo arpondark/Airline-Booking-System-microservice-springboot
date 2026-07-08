@@ -1,0 +1,20 @@
+package site.shazan.payload.response;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class CityResponse {
+    private Long id;
+    private String name;
+    private String cityCode;
+    private String countryCode;
+    private String CountryName;
+    private String regionCode;
+    private String timeZoneId;
+}
