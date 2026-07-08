@@ -19,7 +19,7 @@ public class City {
     @Column(nullable = false)
     private String countryCode;
     @Column(nullable = false)
-    private String CountryName;
+    private String countryName;
     @Column(nullable = false)
     private String regionCode;
     private String timeZoneId;
